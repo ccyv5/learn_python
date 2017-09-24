@@ -6,6 +6,136 @@ print("蔡朝勇开始学习python")
 print("hello world")
 
 
+"""
+######                  list和tuple                     ######
+print("list和tuple")
+
+#list 是数据类型， list的一种有序的集合，可以随时添加和删除和修改元素
+mylist  =   ['abc','efg','hij']
+print(mylist)
+print("mylist   len = ",len(mylist))
+
+#通过索引访问 list
+print("通过顺序索引访问 list")
+print("mylist[0]= ",mylist[0])
+print("mylist[1]= ",mylist[1])
+print("mylist[2]= ",mylist[2])
+print("通过逆序索引访问 list")
+# -1 就是list的最后一个
+print("mylist[-1]= ",mylist[-1])
+print("mylist[-2]= ",mylist[-2])
+print("mylist[-3]= ",mylist[-3])
+
+print("注意正反越界 list")
+
+#给list最后添加元素
+print("给list最后添加元素")
+mylist.append('123')
+print(mylist)
+
+#给list指定位置添加元素
+print("给list指定位置添加元素")
+mylist.insert(3,'ABC')
+print(mylist)
+
+#给list最后删除元素
+print("给list最后删除元素")
+mylist.pop()
+print(mylist)
+
+#给list指定位置删除元素
+print("给list指定位置删除元素")
+mylist.pop(1)
+print(mylist)
+
+#给list指定位置元素替换元素
+print("给list指定位置元素替换元素")
+mylist[0]= "蔡朝勇"
+print(mylist)
+
+#list的元素而可以是list 二维数组
+#类似二维数组
+print("list的元素而可以是list 二维数组")
+mylist[0]= ['蔡','朝','勇']
+print(mylist)
+print("mylist[0][2]= ",mylist[0][2])
+mylist.pop()
+mylist.pop()
+mylist.pop()
+#list  可以定义空的
+#mylist = [] 
+my_null_list = [] 
+print(my_null_list)
+
+
+#tuple 有序列表  元组 初始化后元素的指向无法改变
+mytuple =   (1,2,3)
+print("mytuple",mytuple)
+
+#访问方式  和 list 相同
+print("通过顺序索引访问 tuple")
+print("mytuple(0)",mytuple[0])
+print("mytuple(1)",mytuple[1])
+print("mytuple(2)",mytuple[2])
+print("通过反序索引访问 tuple")
+print("mytuple(-1)",mytuple[-1])
+print("mytuple(-2)",mytuple[-2])
+print("mytuple(-3)",mytuple[-3])
+
+my_null_tuple = ()
+print(my_null_tuple)
+#错误，歧义
+my_one_tuple  = (1)
+print(my_one_tuple)
+my_one_tuple  = (1,)
+print(my_one_tuple)
+
+print("可变tuple-list")
+mytuple_list   = (1,2,3,4,['a','b','c','d'])
+print(mytuple_list)
+mytuple_list[4][0]  =   '蔡'
+print(mytuple_list)
+
+
+
+
+
+
+
+print("")
+######                  list和tuple                     ######
+
+
+######                  字符串                     ######
+
+#记住同意使用utf-8编码
+print("字符串")
+
+#ord 字符转换整数 函数
+#chr 整数转换字符 函数
+print   (    ord('A')   )
+print   (    ord('蔡')   )
+print   (    chr(ord('A'))   )
+print   (    chr(ord('蔡'))   )
+
+#len 字符串长度计算 函数 
+myname  =   "蔡朝勇"
+print   (myname)
+print   ("myname len =",len(myname))
+
+#格式化输出
+#"%d" % (num)
+print   ("myname len = %d over len= " % (len(myname)),len(myname))
+#   %d      整数
+#   %f      浮点数
+#   %s      字符串
+#   %x      十六进制整数
+#   %.2f    显示2为小数
+######                  字符串                     ######
+"""
+
+
+""" #多行注释
 ######                  输入与输出                     ######
 #输出
 print("输入与输出")
@@ -104,8 +234,7 @@ print(10%3)
 print(10/3)
 
 ######                  数据类型和变量                 ######
-
-
+"""
 
 
 
