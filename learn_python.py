@@ -6,6 +6,184 @@ print("蔡朝勇开始学习python")
 print("hello world")
 
 
+
+"""
+######                  dirt                     ######
+print("dirt")
+#字典  里面的元素是 key-value 
+#原因是  输入key之后就知道了 存放value 的内存地址，直接找到了
+#所以比list 查找要快许多
+#一个key只能对应一个value 
+print("key是不可变对象")
+print("value是可以修改的")
+print("字典的输出话用花括号")
+d = {   'a':1,'b':2,'c':'蔡'  }
+print(d)
+print("只能通过key来访问value")
+print(d['c'])
+print("将value 变成list")
+d['c']=["蔡","超","勇"]
+print(d)
+d['c'].pop()    
+print(d)
+#list的操作 list.append("123")   list.pop()     list.pop(2) list.insert(2) 
+
+print("key 是可不怕的那么 tuple 是否可以做 key 有list的 tuple 是否可以是key")
+
+d   = {1:1,"a":2,(2,3,4):3}
+print(d)
+print("访问key tuple")
+print(    d[1]  )
+#访问字典中的 以tupel 为key 的value 时，[必须是完整的key]
+print(    d[2,3,4]   )
+
+#d   = {1:1,"a":2,(2,3,[1,2,3]):3}      #语法错误
+#print(d)
+
+print("dirt 中的 key 是不可变对象，只能用不可变的数据类型，数组，字符串，没有list的tuple")
+
+print("通过in 访key 是否存在，结果返回 True 或者 False")
+d   = {1:1,"a":2,(2,3,4):3}
+
+print(  "a" in d )
+print(  (2,3,4) in d) 
+
+#print("通过 dirt 通过的 get 方法 访问key ，不存在返回None 或者直接指定的 value")
+
+print( d.get(1))
+print( d.get(2))
+print( d.get((2,3,4)))
+#print("如果不存在，返回-100")
+print( d.get(2,-100))
+
+#print("删除一个key，使用d.pop(key) ")
+print(d)
+d.pop(1) 
+print(d)
+print("内部是无序的")
+
+#print("增加一个key，直接 写 d[newkey]   =   newvalue ")
+print(d)
+d[222]="sss"
+print(d)
+
+######                  dirt                     ######
+
+
+######                  set                     ######
+print("set")
+print("set 是一个内部没有 value 的字典。只保存了 key")
+print("因为key 是不可能重复的，所以 set 里面没有重合的key   ")
+print("set 用来做交集和并集和 处理，可以计算 不同key的个数")
+print("set 的使用就像一个 函数一样，在定义的时候 通过一个list 的list 内的元素 传入set内部。")
+print("set 内部就用了 三个元素 是没有顺序的")
+#print("s  =set(list)      ")
+s = set(    [1,2,3]  )
+print(s)
+#print("如果list是空的呢！")
+s= set([])
+print(s)
+
+s = set(    [1,2,3,3]  )    #自动过滤 重复key
+print(s)
+#print("s.add(key)增加新的key")
+s.add(5)
+print(s)
+#print("s.remove(key)删除key")
+s.remove(3)
+print(s)
+
+s1 = set([1,2,3,4])
+s2 = set([4,5,6,7])
+
+#print("set 的交集和并集")
+s3  =   s1&s2
+s4  =   s1|s2
+print(s3)
+print(s4)
+
+print("不可变对象")
+
+print("list 是可变得  ")
+a = ['c', 'b', 'a']
+print(a)
+#print("将 list a 中 安顺序排放")
+a.sort()                            #list.sort() 排序函数
+print(a)
+
+print("字符串 是可变得  ")
+
+a = "addsadaaaf"
+print(a)
+a.replace("a","A")                  #str.replace（"a","A"）字符串替换函数    
+b= a.replace("a","A")               #生成新的字符串 ，原来的字符串不会改变
+print(a)
+print(b)
+
+######                  set                     ######
+"""
+
+"""
+######                  循环                     ######
+print("循环")
+#while 
+print("while")
+sum = 0
+n = 99
+while n > 0:
+    sum = sum + n
+    n = n - 2
+else:           #while 还可以使用 else哦
+    print(n)
+print(sum)
+#for 
+print("for")
+#将 序列中的 元素 逐一赋值给    x
+mytuple =   (1,2,3)
+for x in mytuple:   
+    print(x)
+
+#生成 有序序列list
+
+for_sum =   0;
+for x in [1,2,3,4,5]:   
+    for_sum=    for_sum +x;
+print(for_sum)
+for_sum =   0;
+for x in range(2,5):        
+#range 函数生成一个带起点和终点的有序序列   
+    for_sum=    for_sum +x;
+print(for_sum)
+
+######                  循环                     ######
+"""
+
+"""
+######                  条件判断                     ######
+'''
+if <条件判断1>:
+    <执行1>
+elif <条件判断2>:
+    <执行2>
+elif <条件判断3>:
+    <执行3>
+else:
+    <执行4>
+'''
+print("条件判断")
+#注意点 input 输入的是str 
+#通过int 函数  将 字符串转换成 整数转换字符
+s = input('birth: ')
+print(s)
+birth = int(s)    #输入错误会error
+print(birth)
+if birth < 0:
+    print('负数')
+else:
+    print('正数')
+######                  条件判断                     ######
+"""
+
 """
 ######                  list和tuple                     ######
 print("list和tuple")
